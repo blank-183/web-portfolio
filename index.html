@@ -53,26 +53,6 @@
     </nav>
     <!-- Navbar End -->
 
-
-    <!-- Video Modal Start -->
-    <!-- <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>         -->
-                    <!-- 16:9 aspect ratio -->
-                    <!-- <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Video Modal End -->
-
-
     <!-- Header Start -->
     <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
         <div class="container">
@@ -100,8 +80,7 @@
     <!-- Header End -->
 
     <!-- About Start -->
-    <div class="container-fluid py-5" id="about">
-        
+    <div class="hidden container-fluid py-5" id="about">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
@@ -141,7 +120,7 @@
 
 
     <!-- Qualification Start -->
-    <div class="container-fluid py-5" id="qualification">
+    <div class="hidden container-fluid py-5" id="qualification">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
@@ -209,7 +188,7 @@
 
 
     <!-- Skill Start -->
-    <div class="container-fluid py-5" id="skill">
+    <div class="hidden container-fluid py-5" id="skill">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
@@ -217,7 +196,7 @@
             </div>
             <p class="justify-p mb-4">The technologies listed below are ones I am currently using or am familiar with.</p>
             <div class="skills">
-                <a>
+                <a class="skill">
                     <div class="skill-icon">
                         <img src="svg/python.svg"/>
                     </div>
@@ -225,7 +204,7 @@
                         <p>Python</p>
                     </div>
                 </a>
-                <a>
+                <a class="skill">
                     <div class="skill-icon">
                         <img src="svg/java.svg"/>
                     </div>
@@ -233,7 +212,7 @@
                         <p>Java</p>
                     </div>
                 </a>
-                <a>
+                <a class="skill">
                     <div class="skill-icon">
                         <img src="svg/js.svg"/>
                     </div>
@@ -344,7 +323,7 @@
 
 
     <!-- Portfolio Start -->
-    <div class="container-fluid pt-5 pb-3" id="portfolio">
+    <div class="hidden container-fluid pt-5 pb-3" id="portfolio">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Projects</h1>
@@ -385,18 +364,54 @@
 
 
     <!-- Certificates Start -->
-    <div class="container-fluid pt-5 pb-3" id="certifications">
+    <div class="hidden container-fluid pt-5 pb-3" id="certifications">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
                 <h1 class="position-absolute text-uppercase text-primary" style="text-align: center;">Licenses and Certificates</h1>
             </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
+                    <div class="card">
+                        <a href="#galleryModal" data-large-src="img/p2.jpg" data-toggle="modal">
+                            <img class="card-img-top" src="img/p2.jpg" alt="Card image cap">
+                        </a>
+                        
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Pharmatech</h5>
+                            <p class="card-text justify-p">
+                                An ML-based WebView application that extracts handwritten texts from medical prescriptions 
+                                and converts them into readable digital texts.
+                            </p>
+                            <a href="https://github.com/Research-Grp/Thesis/tree/main" target="_blank" class="btn btn-outline-primary mt-auto">See Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Certificates End -->
+    <div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="text-center mb-0"></h3>
+                    <button type="button" class="close float-right" aria-label="Close" data-dismiss="modal">
+                      <span aria-hidden="true">&#xD7;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-0 text-center bg-alt">
+                    <img src="//placehold.it/1200x700/222?text=..." id="galleryImage" class="loaded-image mx-auto img-fluid">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Start -->
-    <div class="container-fluid py-5" id="contact">
+    <div class="hidden container-fluid py-5" id="contact">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
@@ -490,6 +505,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script defer src="js/observer.js"></script>
 </body>
 
 </html>
